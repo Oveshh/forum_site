@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css1/css/bootstrap.css">
+    <title>设置</title>
+    <style>
+        .shuru {list-style-type:none;
+            position:absolute;
+            left:140px;
+            width:400px;
+            background-color: transparent;
+            color:white;
+        }
+        .shuru1 {list-style-type:none;
+            position:absolute;
+            left:140px;
+            top:36px;
+            background-color: transparent;
+            color:white;
+        }
+        #ul{
+            position:absolute;
+            left:500px;
+            top:200px;
+        }
+        li{list-style-type:none;
+            color:white;
+            border-color: gray;
+        }
+        body{
+            background-image: url(../static/image/chun.jpg);
+        }
+        #zhanghao{
+            color:white;
+            font-size: 30px;
+            position:absolute;
+            left:130px;
+            top:40px;
+        }
+        #btn{
+            position:absolute;
+            left:260px;
+            top:400px;
+            width:80px;
+            height:40px;
+            background-color: transparent;
+            border-color: gray;
+            color:white;
+        }
+        #home{
+            position: absolute;
+            top:40px;
+            right:100px;
+            background-color: transparent;
+            border-color: gray;
+        }
+        #back{
+            position:absolute;
+            top:40px;
+            left:40px;
+            background-color: transparent;
+            border-color: gray;
+        }
+        #pictureback{
+            position:absolute;
+            top:40px;
+            left:740px;
+            width: 130px;
+            height: 130px;
+            border:2px solid white ;
+        }
+       </style>
+</head>
+<body>
+    <form method="post" action="infoset.html">
+    <ul id="ul">
+        <br><br> 
+        <li >头像<input type="file" id="touxiang" name="touxiang" class="shuru1"></li><br><br> 
+        <li>昵称<input type="text" name="nicheng" class="shuru"></li><br><br>
+        <li>简介<input type="text" name="jianjie" class="shuru"></li><br><br>
+        <li>个性签名<input type="text" name="qiaming" class="shuru"></li><br><br>
+        <li>爱好<input type="text" name="aihao" class="shuru"></li><br><br>
+        <li>学校<input type="text" name="xuexiao" class="shuru"></li>
+        <li><button class="btn btn-default" type="submit" id="btn">提交</button></li>
+    </ul>
+</form >
+    <div id="zhanghao">账号信息设置</div>
+    <button class="btn btn-default" id="home"><a href="/index/" ><img src="../static/image/home.png" alt=""></a></button>
+    <button class="btn btn-default" id="back"><a href="/userpage/" ><img src="../static/image/back.png" alt=""></a></button>
+    <div id="pictureback">{{pictureback}}</div>
+</body>
+</html>

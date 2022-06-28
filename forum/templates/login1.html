@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../static/css1/css/login.css">
+</head>
+<body>
+    <form role="form" action="{{ request.get_full_path }}" class="login" method="post" >
+        {% csrf_token %}
+        <p>Welcome</p>
+        <input type="text" placeholder="用户名" name="username">
+        <input type="password" placeholder="密码" name="password">
+        <a href="/register" target="_top"><input type="button" class="zhc" value="注  册"></a>
+        <a href="/index" target="_top"><input type="button" class="btn" value="登  录"></a>
+        <h4><a href="findpassword.html" target="_top">忘记密码?</a></h4>
+        <h5>-------使用面部识别登录-------</h5>
+        <h6><a href="face.html"><img src="../static/image/人脸识别logo.jpg" width="50px" ></a></h6>
+    </form>
+    <body background="../static/image/shouye4k.jpg"></body>
+</body>
+</html>

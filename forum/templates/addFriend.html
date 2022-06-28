@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加好友</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        body {
+            background-image: url(../static/image/jhybg.jpg);
+        }
+        
+        .header {
+            margin: 10px auto;
+            height: 40px;
+            width: 1500px;
+        }
+        
+        button {
+            width: 50px;
+            height: 40px;
+            background-color: transparent;
+            border: 0;
+        }
+        
+        button:hover {
+            background-color: #a54b4a;
+        }
+        
+        li {
+            float: left;
+            list-style: none;
+        }
+        
+        .bt {
+            display: inline-block;
+            width: 140px;
+            height: 40px;
+            text-align: center;
+            margin-left: 650px;
+        }
+        
+        .box {
+            position: relative;
+            width: 650px;
+            margin: 5px auto;
+        }
+        
+        .box div {
+            margin-left: 100px;
+            margin-bottom: 50px;
+        }
+        
+        input {
+            height: 30px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        
+        .box .one button {
+            position: absolute;
+            top: 0;
+        }
+        
+        .box span {
+            display: inline-block;
+        }
+        
+        .two {
+            color: white;
+        }
+        
+        .two a {
+            position: absolute;
+            top: 85px;
+            right: 100px;
+        }
+        
+        .box button {
+            position: absolute;
+            right: 100px;
+        }
+        
+        #yonghu1 {
+            position: absolute;
+            left: 170px;
+            top: 170px;
+        }
+        
+        #yonghu2 {
+            position: absolute;
+            left: 170px;
+            top: 270px;
+        }
+        
+        #yonghu3 {
+            position: absolute;
+            left: 170px;
+            top: 390px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li><a href="index.html"><button><img src="../static/css1/css/fh.png" alt=""></button></a></li>
+            <li>
+                <span class="bt"><h1>贴吧找人</h1></span>
+            </li>
+        </ul>
+    </div>
+    <div class="box clearfix">
+        <div class="one"><input type="text" value="账号">
+            <a href="#"><button><img src="image/next.png" alt=""></button></a>
+        </div>
+        <div class="two"><span>可能想认识的人</span>
+            <a href="#">查看更多 &gt</a>
+        </div>
+        <div class="three">
+            <img src="image/hy1.png" alt="">
+            <span id="yonghu1">用户1</span>
+            <button>添加</button>
+        </div>
+        <div>
+            <img src="image/hy2.png" alt="">
+            <span id="yonghu2">用户2</span>
+            <button>添加</button></div>
+        <div>
+            <img src="image/hy3.png" alt="">
+            <span id="yonghu3">用户3</span>
+            <button>添加</button></div>
+    </div>
+</body>
+
+</html>

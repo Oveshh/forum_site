@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>帖子页面</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <style>
+        #fanhui {
+            position: absolute;
+            left: 30px;
+            top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+{#    <form action="/index/" method="POST">#}
+{#        {% csrf_token %}#}
+{#        <button type="submit" id="fanhui">返回</button>#}
+{#    </form>#}
+    <div class="container" style="margin-bottom: 20px;">
+
+        <div class="col-md-8" style="padding:0px;">
+            <h3 style="">
+                {{article.title}} {% if request.user in article.column.users.all or request.user == article.users %}
+                <a class="btn btn-info" style="float: right;" data-toggle="modal" data-target=".myModalshow">修改</a>
+
+                <a href="/article/{{article.id}}/delete/" class="btn btn-danger" style="float: right;">删除</a> {% endif %}
+
+            </h3>
+            {% if messages %} {% for message in messages %}
+            <div class="alert {%if message.tags %} alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+            {% endfor %}
+            <hr/> {% endif %}
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    {{article.content}}
+                </div>
+            </div>
+
+
+            <!-- List group -->
+            <ul class="list-group">
+                {% for comment in article.replys.all %}
+                <li class="list-group-item">
+                    <h5>{{comment.user.username}}： {% if request.user in article.column.users.all or request.user == article.users or request.user == comment.user %}
+                        <a href="/article/{{comment.id}}/comment/delete/" class="btn btn-xs btn-danger" style="float:right;">删除</a> {% endif %}
+                    </h5>
+                    {{comment.content}}
+                </li>
+                {% endfor %}
+
+            </ul>
+
+            <hr />
+            <form action="/article/{{article.id}}/comment/" method="post">
+                <div class="form-group">
+                    <label for="exampleInputComment">回复：</label>
+                    <textarea name="comment" class="form-control" rows="3"></textarea>
+                </div>
+                {%csrf_token%} {% comment %}防止跨网站攻击{% endcomment %}
+                <button type="submit" class="btn btn-default">提交</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="modal fade myModalshow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4>修改帖子内容</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form action="/article/{{article.id}}/put/" method="post">
+                        <div class="form-group">
+                            <label for="exampleInputTitle">帖子标题：</label>
+                            <input name="title" type="text" class="form-control" value="{{ article.title }}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">帖子内容：</label>
+                            <textarea name="content" class="form-control" rows="3">{{article.content}}</textarea>
+                        </div>
+                        {%csrf_token%}
+                        <button type="submit" class="btn btn-primary">确定</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

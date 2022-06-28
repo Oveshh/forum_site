@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>评论</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            width: 60px;
+            height: 40px;
+            border: 0;
+            font-size: 20px;
+            /* background-color: #f66f6a; */
+            background-color: transparent;
+            color: green;
+        }
+        
+        button:hover {
+            background-color: #a54b4a;
+        }
+        
+        body {
+            background-image: url(../static/image/chun.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        .header {
+            margin: 10px auto;
+            height: 60px;
+            width: 1300px;
+            /* background-color: pink; */
+        }
+        
+        .header ul li {
+            float: left;
+            list-style: none;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+        
+        .fanhui {
+            width: 150px;
+            /* background-color: transparent; */
+        }
+        
+        .qiutan {
+            width: 1000px;
+            font-size: xx-large;
+            color: black;
+        }
+        
+        .guanzhu {
+            width: 150px;
+        }
+        
+        .box {
+            margin: 10px auto;
+            height: 60px;
+            width: 1300px;
+            /* background-color: powderblue; */
+        }
+        
+        .box ul li {
+            list-style: none;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+        }
+        
+        .zhuanfa {
+            float: left;
+            margin-left: 30px;
+            width: 100px;
+        }
+        
+        .pinglun {
+            float: left;
+            margin-left: -50px;
+            width: 100px;
+        }
+        
+        .zan {
+            float: right;
+            width: 100px;
+            margin-right: 30px;
+        }
+        
+        .footer {
+            margin: 10px auto;
+            width: 1300px;
+            /* background-color: powderblue; */
+        }
+        
+        .footer a {
+            text-decoration: none;
+            color: skyblue;
+        }
+        
+        .footer li {
+            list-style: none;
+        }
+        
+        .footer div {
+            float: left;
+        }
+        
+        .touxiang {
+            margin-left: 60px;
+        }
+        
+        .neirong {
+            margin-left: 5px;
+        }
+        
+        .nr p {
+            color: gray;
+        }
+        
+        .yh {
+            height: 20px;
+            color: gray;
+        }
+        
+        .bt {
+            font-size: 40px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+        
+        .hf {
+            line-height: 60px;
+        }
+        
+        .time {
+            line-height: 10px;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <li class="fanhui">
+                <a href="index.html"><button>&lt 返回</button></a>
+            </li>
+            <li class="qiutan">
+                NBA球探
+            </li>
+            <li class="guanzhu">
+                <button>+ 关注</button>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <ul>
+            <li class="zhuanfa"><button>转发</button></li>
+            <li class="pinglun"><button>评论</button></li>
+            <li class="zan"><button>赞</button></li>
+        </ul>
+    </div>
+    <div class="footer clearfix">
+        <div class="touxiang"><img src="image/qttouxiang.png" alt=""></div>
+        <div class="neirong">
+            <ul>
+                <li class="yh">用户xxx</li>
+                <li class="bt">
+                    <p>
+                        勇士总冠军！！！！
+                    </p>
+                </li>
+                <li class="nr">
+                    <p class="p1">
+                        用户1：你可拉倒吧，不可能的！
+                    </p>
+                    <p>
+                        用户2：天之骄子。。。。
+                    </p>
+                    </textarea>
+                </li>
+                <li class="hf"><a href="#">共有xx条回复 &gt</a></li>
+                <li class="time">
+                    第6楼6-22 10：25 来自重庆
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转发评论</title>
+    <style>
+        body {
+            background-image: url(../static/image/chun.jpg);
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        
+        .header {
+            height: 100px;
+            width: 1500px;
+            /* background-color: pink; */
+        }
+        
+        .header li {
+            list-style: none;
+        }
+        
+        button {
+            float: right;
+            margin: 30px 100px;
+            height: 30px;
+            width: 70px;
+            border: 0;
+            border-radius: 10px;
+            background-color: rgba(233, 80, 80, 0.842);
+        }
+        
+        button:hover {
+            background-color: #a54b4a
+        }
+        
+        h1 {
+            height: 100px;
+            width: 300px;
+            line-height: 100px;
+            text-align: center;
+            margin: 0 auto;
+            /* background-color: red; */
+        }
+        
+        #pj {
+            height: 300px;
+            margin-left: 400px;
+            margin-top: 40px;
+            background-color: transparent;
+            border-color: black;
+        }
+        
+        #pj::-webkit-input-placeholder {
+            height: 300px;
+            line-height: 300px;
+            font-size: xx-large;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/index/"><img src="../static/image/fanh.jpg"></a>
+    <div>
+        <div class="header">
+            <form action="/index/" method="GET">
+                {% csrf_token %}
+            <ul>
+                <li>
+
+                    <button type="submit">发送</button></li>
+                <li>
+                </li>
+            </ul>
+
+        </div>
+        <div class="box">
+            <input name="comment" id="pj"  ></textarea>
+        </div>
+        <div id="comment_back">{{comment_back}}</div>
+             </form>
+    </div>
+</body>
+
+</html>

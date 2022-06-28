@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>广场</title>
+    <style>
+        body {
+            background-repeat: no-repeat;
+            background-size: 1600px;
+        }
+
+        #guanzhu {
+            position: absolute;
+            left: 650px;
+            top: 60px;
+            height: 40px;
+            width: 80px;
+            background-color: transparent;
+            border-color: bisque;
+        }
+
+        #remen {
+            position: absolute;
+            right: 550px;
+            top: 60px;
+            height: 40px;
+            width: 80px;
+            background-color: transparent;
+            border-color: bisque;
+        }
+
+        #touxiang {
+            position: absolute;
+            left: 410px;
+            top: 140px;
+            border: 3px solid white;
+        }
+
+        #i_touxiang {
+            width: 120px;
+        }
+
+        #jishu {
+            position: absolute;
+            left: 560px;
+            top: 160px;
+            font-size: 24px;
+        }
+
+        #xinwen {
+            position: absolute;
+            left: 560px;
+            top: 200px;
+            color: rgb(163, 123, 71);
+            font-size: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #pinglun {
+            position: absolute;
+            left: 560px;
+            top: 250px;
+            width: 600px;
+            height: 140px;
+            background-color: transparent;
+            border-color: rgb(195, 144, 14);
+            font-size: 26px;
+        }
+
+        #video {
+            position: absolute;
+            left: 560px;
+            top: 394px;
+            border: 1;
+            border: 1;
+            background-color: transparent;
+            border: solid;
+            width: 460px;
+        }
+
+        #zhuanfa {
+            position: absolute;
+            left: 1100px;
+            top: 700px;
+            background-color: transparent;
+            border: 0ch;
+        }
+
+        #dianzan {
+            position: absolute;
+            left: 570px;
+            top: 686px;
+            background-color: transparent;
+            border: 0ch;
+        }
+
+        #pinglun_1 {
+            position: absolute;
+            left: 835px;
+            top: 700px;
+            background-color: transparent;
+            border: 0ch;
+        }
+
+        #lengthen {
+            height: 1000px;
+        }
+
+        #haoyou {
+            position: absolute;
+            right: 100px;
+            top: 40px;
+        }
+
+        #bankuai {
+            position: absolute;
+            top: 130px;
+            left: 60px;
+        }
+
+        .board {
+            height: 40px;
+            width: 80px;
+            background-color: transparent;
+            border-color: bisque;
+        }
+
+        #luntan {
+            position: absolute;
+            left: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="/login/">退出登录</a></h2>
+    <a href="/addFriend/"><button id="guanzhu">关注</button></a>
+    <a href="https://s.weibo.com/top/summary/"><button id="remen">热门</button></a>
+    <div id="touxiang">
+        <a href="/userpage/"> <img src="../static/image/TX.png" id="i_touxiang"></a>
+    </div>
+    <div id="jishu"><a href="http://www.python.org">python交流</a><br></div>
+    <div id="xinwen"><a href="#">交易新闻</a></div>
+    <textarea name="" id="pinglun"></textarea>
+    <div id="shipin"><video src="#" controls="controls" id="video"></video></div>
+    <button id="dianzan"><a href="/index/"><img src="../static/image/dianzan.jpg" alt=""></a></button>
+    <button id="zhuanfa"><a href="/repost/"><img src="../static/image/zhuanfa.jpg" alt=""></a></button>
+    <button id="pinglun_1"><a href="/plate/{{plates.1.id}}/"><img src="../static/image/pinglun.jpg" alt=""></a></button>
+    <div id="lengthen"></div>
+    <div id="haoyou"><a href="/addFriend/"><button ><img src="../static/image/haoyou.png" alt=""></button></a></div>
+    <div class="container">
+        <div id="bankuai">
+            <h1>论坛页面——板块</h1>
+            <dov class="col-md-8" style="padding: 0px;">
+
+                <div class="list-group" id="luntan">
+                    <br><br> {% for p in plates %}
+                    <button class="board">
+                            <a href="/plate/{{p.id}}" class="list-group-item">{{p.title}}</a></button><br><br> {% endfor %}
+                </div>
+        </div>
+        </dov>
+    </div>
+
+    </div>
+</body>
+
+</html>

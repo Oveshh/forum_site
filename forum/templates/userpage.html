@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户界面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        
+        body {
+            background-image: url(../static/image/chun.jpg);
+            background-size: 1520px 800px;
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+        }
+        
+        a {
+            color: #333333;
+            text-decoration: none;
+        }
+        
+        .bg {
+            margin: 10px auto;
+            width: 1300px;
+            height: 50px;
+        }
+        
+        .touxiang {
+            float: left;
+            line-height: 50px;
+            margin-left: 10px;
+        }
+        
+        .today {
+            position: absolute;
+            margin-top: 10px;
+            top: 100px;
+            left: 100px;
+        }
+        
+        .jintian {
+            float: left;
+            color: white;
+            font-weight: normal;
+            font-size: large;
+        }
+        
+        .paishe {
+            position: absolute;
+            float: left;
+            left: 150px;
+            width: 200px;
+            margin-left: 135px;
+            /* background: rgba(0, 0, 0, 1); */
+        }
+        
+        .lishi {
+            position: absolute;
+            top: 260px;
+            left: 70px;
+            width: 1600px;
+            height: 70px;
+        }
+        
+        .riqi {
+            float: left;
+            /* background-color: powderblue; */
+            height: 66px;
+            width: 100px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 72px;
+            color: white;
+            padding-left: 0;
+        }
+        
+        .yuefen {
+            float: left;
+            /* background-color: rgb(176, 230, 188); */
+            height: 66px;
+            width: 120px;
+            text-align: center;
+            line-height: 70px;
+            font-size: 40px;
+            color: white;
+        }
+        
+        .neirong {
+            float: left;
+            /* background-color: rgb(176, 180, 230); */
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            line-height: 300px;
+            margin-left: 100px;
+        }
+        
+        .neirong .img {
+            width: 100%;
+            height: 100%;
+        }
+    h1{
+        color: beige;
+        font-size: 30px;
+    }
+    #tuku{
+        position: absolute;
+        right: 200px;
+    }
+    #shezhi{
+        position: absolute;
+        right: 120px;
+        top: 2px;
+    }
+    </style>
+</head>
+
+<body>
+    <a href="/index/"><img src="../static/image/fanh.jpg"></a>
+    <a href="#"><img src="../static/image/tuku.png" id="tuku"></a>
+    <a href="/infoset/"><img src="../static/image/shez.jpg" id="shezhi"></a>
+
+    <div class="bg">
+        <div class="touxiang">
+            <img src="../static/image/TX.png" width="40px">
+            <input type="text" value="用户">
+        </div>
+    </div>
+    <div class="today">
+        <div class="jintian">
+            <h1 style="color: black; font: size 20px;;">今天</h1>
+        </div>
+        <div class="paishe">
+            <h1 style="color: black;">幸甚至哉!!</h1>
+        </div>
+    </div>
+
+    <div class="lishi clearfix">
+        <div class="riqi">22</div>
+        <div class="yuefen">6月</div>
+        <div class="neirong"><img src="../static/image/fengjing.jpg" alt="" height="400px"></div>
+    </div>
+</body>
+
+</html>
